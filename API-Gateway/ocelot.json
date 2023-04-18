@@ -1,0 +1,30 @@
+{
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/API1/motd",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/v1/hello",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5068
+                }
+            ]
+        },
+        {
+            "UpstreamPathTemplate": "/API2/motd",
+            "UpstreamHttpMethod": [ "GET" ],
+
+            "DownstreamPathTemplate": "/api/v1/hello",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5232
+                }
+            ]
+        }
+    ]
+}
